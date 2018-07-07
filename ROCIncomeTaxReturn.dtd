@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ELEMENT -->
+
+<!ELEMENT incomeTaxReturnSample (header, form, footer)>
+
+<!ELEMENT header (notice, type, head, headInstructions, headerForm)>
+<!ELEMENT headerForm (head, format, office, serviceArea, boxNumber, pageNumber)>
+
+<!ELEMENT form (notice*, taxPayerAndTaxAllowance, comprehensiveIncomeTotal, deductions, taxCalculationFormula, useSavingsAccountTaxRefund, creditCardTax)>
+<!ELEMENT taxPayerAndTaxAllowance (name, supportingRelatives, reduceTax+, taxAllowanceTotal_DM)>
+<!ELEMENT name (taxPayer_DD, spouse_SS, householdRegistrationWhenDeclaring, notificationSendingPlace, contactPhoneNumber)>
+<!ELEMENT taxPayer_DD (name, iDNumber, birthYear, disabilities)>
+<!ELEMENT spouse_SS (name, iDNumber, birthYear, disabilities)>
+<!ELEMENT householdRegistrationWhenDeclaring (rent, city, district, village, neighborhood, road, section, lane, alley, number, floor, room)>
+<!ELEMENT notificationSendingPlace (rent, city, district, village, neighborhood, road, section, lane, alley, number, floor, room)>
+<!ELEMENT contactPhoneNumber (phoneNumber1, phoneNumber2)>
+<!ELEMENT supportingRelatives (loginCode*)>
+<!ELEMENT loginCode (name, iDNumber, head, birthYear, cohabitation, learning, disabilities)>
+<!ELEMENT reduceTax (type, people, total, reviewNumberOfPeople)>
+<!ELEMENT comprehensiveIncomeTotal (income*, totalIncome_YM, spousetotalIncome_YN, comprehensiveIncomeTotal_AA, totalWithholdingTaxAndDeductibleTaxAmount_AG)>
+<!ELEMENT income (people*)>
+<!ELEMENT people (name, total, withholdingTaxOrDeductibleTaxAmount)>
+<!ELEMENT deductions (deductionsItem*, totalDeductions, comprehensiveNetIncomeCalculation)>
+<!ELEMENT deductionsItem (instructions, people*, subtotal, authorityAudit)>
+<!ELEMENT totalDeductions (subtotal, authorityAudit)>
+<!ELEMENT comprehensiveNetIncomeCalculation (calculationFormula)>
+<!ELEMENT calculationFormula (comprehensiveIncome, allAllowances, allDeductions, comprehensiveNetIncome)>
+<!ELEMENT taxCalculationFormula (type*)>
+<!ELEMENT type (calculationFormula*, authorityAudit, notice)>
+<!ELEMENT calculationFormula (comprehensiveNetIncome | taxRate | progressiveDifference | payable | allwithholdingTaxAndTaxDeductible | refundOfTax | shouldPayTheirOwnTaxes | salaryTaxSeparatedBySalaryIncome | taxationForTaxPayers | payrollIncomeDeductionsForPayrollTaxation | netSalaryOfPayrollTaxation | taxPayableSeparatelyFromTheTaxablePortion | excludingNetIncomeFromTheSeparateTaxPortionOfPayroll | excludingTaxPayableForTheSeparateTaxPortionOfPayroll | taxesForVariousTypesOfIncome | taxationAllowancesForSeparateTaxationOfVariousTypesOfincome | taxDeductionsForSalaryIncomeForSeparateTaxationOfVariousTypesOfIncome | separateDeductionsForSavingsAndInvestmentsOfTaxCollectorsOfVariousTypesOfIncome | specialDeductionsForPhysicalAndMentalDisabilitiesForIndividualIncomeTaxes | netIncomeOfVariousTypesOfIncomeSeparatelyTaxed | taxPayableForSeparateTaxationOfVariousTypesOfIncome | reduceTax | excludingNetIncomeFromSeparateTaxationOfVariousTypesOfIncome | excludingTaxPayableForSeparateTaxationOfVariousTypesOfIncome)*>
+<!ELEMENT useSavingsAccountTaxRefund (notice*, name, iDNumber, financialInstitutions, assessingAgencyDesignation, account, postOffice)>
+<!ELEMENT financialInstitutions (generalAgency, branches)>
+<!ELEMENT account (separate, subject, accountNumber, inspectionNumber)>
+<!ELEMENT postOffice (officeName, depositReserve, transferFundsAccount)>
+<!ELEMENT depositReserve (bureauNumber, depositBookDepositAccount)>
+<!ELEMENT creditCardTax (notice, bV, authorizationNumber, cardholder)>
+<!ELEMENT authorizationNumber (number*)>
+<!ELEMENT cardholder (taxpayer_DD, spouse_SS)>
+
+<!ELEMENT footer (section1, section2)>
+<!ELEMENT section1 (taxpayerSignOrStamp, notice+, attachmentArea, receivingAgencyReceiptStampAndDate)>
+<!ELEMENT attachmentArea (noAttachment, attachment)>
+<!ELEMENT attachment (notice*)>
+<!ELEMENT section2 (received, notice*, attachmentArea, receivingAgencyReceiptStampAndDate)>
+<!ELEMENT received (name, gender, city, district, village, neighborhood, road, section, lane, alley, number, floor, room)>
+<!ELEMENT attachmentArea (notice, noAttachment, attachment)>
+
+<!-- PCDATA with ELEMENT -->
+
+<!ELEMENT notice (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT head (#PCDATA)>
+<!ELEMENT headInstructions (#PCDATA)>
+<!ELEMENT format (#PCDATA)>
+<!ELEMENT office (#PCDATA)>
+<!ELEMENT serviceArea (#PCDATA)>
+<!ELEMENT boxNumber (#PCDATA)>
+<!ELEMENT pageNumber (#PCDATA)>
+<!ATTLIST notice check (true | false) "false">
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT iDNumber (#PCDATA)>
+<!ELEMENT birthYear (#PCDATA)>
+<!ATTLIST birthdisabilities check (true | false) "false">
+<!ATTLIST rent check (true | false) "false">
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT district (#PCDATA)>
+<!ELEMENT village (#PCDATA)>
+<!ELEMENT neighborhood (#PCDATA)>
+<!ELEMENT road (#PCDATA)>
+<!ELEMENT section (#PCDATA)>
+<!ELEMENT lane (#PCDATA)>
+<!ELEMENT alley (#PCDATA)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT floor (#PCDATA)>
+<!ELEMENT room (#PCDATA)>
+<!ATTLIST notificationSendingPlace status (同上 | none) "同上">
+<!ELEMENT phoneNumber1 (#PCDATA)>
+<!ELEMENT phoneNumber2 (#PCDATA)>
+<!ATTLIST loginCode code (D01 | D02 | D03 | D04 | D05 | D06) #REQUIRED>
+<!ATTLIST cohabitation status (是 | 否) "是">
+<!ATTLIST learning status (是 | 否) "是">
+<!ATTLIST disabilities check (true | false) "false">
+<!ELEMENT people (#PCDATA)>
+<!ELEMENT total (#PCDATA)>
+<!ELEMENT reviewNumberOfPeople (#PCDATA)>
+<!ELEMENT taxAllowanceTotal_DM (#PCDATA)>
+<!ATTLIST income type (Salary income | Interest income | Profit income | Welfare | Contribution fees below 180,000) #REQUIRED>
+<!ELEMENT withholdingTaxOrDeductibleTaxAmount (#PCDATA)>
+<!ELEMENT WithholdingTax (#PCDATA)>
+<!ELEMENT totalIncome_YM (#PCDATA)>
+<!ELEMENT spousetotalIncome_YN (#PCDATA)>
+<!ELEMENT comprehensiveIncomeTotal_AA (#PCDATA)>
+<!ELEMENT totalWithholdingTaxAndDeductibleTaxAmount_AG (#PCDATA)>
+<!ATTLIST deductionsItem type (Special deductions for salary income | Savings Special Deductions | Standard Deduction | Disabilities Special Deduction | Education Tuition Special Deduction | Preschoolers Special Deduction) #REQUIRED>
+<!ELEMENT instructions (#PCDATA)>
+<!ATTLIST people type (Taxpayer | Spouse | All dependents) #REQUIRED>
+<!ELEMENT totalSalaryIncomeForTheWholeYear (#PCDATA)>
+<!ELEMENT deductible (#PCDATA)>
+<!ELEMENT subtotal (#PCDATA)>
+<!ELEMENT authorityAudit (#PCDATA)>
+<!ATTLIST instructions check (true | false) #REQUIRED>
+<!ATTLIST instructions people (0 | 1 | 2 | 3 | 4 | 5) "0">
+<!ATTLIST comprehensiveIncome operation (+ | - | * | / | none) "+">
+<!ATTLIST allAllowances operation (+ | - | * | / | none) "-">
+<!ATTLIST allDeductions operation (+ | - | * | / | none) "-">
+<!ATTLIST comprehensiveNetIncome operation (+ | - | * | / | none) "none">
+<!ATTLIST comprehensiveIncome sign CDATA #FIXED "AA">
+<!ATTLIST allAllowances sign CDATA #FIXED "DM">
+<!ATTLIST allDeductions sign CDATA #FIXED "AB1">
+<!ATTLIST comprehensiveNetIncome sign CDATA #FIXED "AE">
+<!ATTLIST type name (Combined calculation tax amount | Separately calculated tax amount for salary income | Taxes are calculated separately for various types of income) #REQUIRED>
+<!ATTLIST type number (1 | 2 | 3) #REQUIRED>
+
+<!ATTLIST comprehensiveNetIncome operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST taxRate operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST progressiveDifference operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST payable operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST allwithholdingTaxAndTaxDeductible operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST refundOfTax operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST shouldPayTheirOwnTaxes operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST salaryTaxSeparatedBySalaryIncome operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST taxationForTaxPayers operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST payrollIncomeDeductionsForPayrollTaxation operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST netSalaryOfPayrollTaxation operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST taxPayableSeparatelyFromTheTaxablePortion operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST excludingNetIncomeFromTheSeparateTaxPortionOfPayroll operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST excludingTaxPayableForTheSeparateTaxPortionOfPayroll operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST taxesForVariousTypesOfIncome operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST taxationAllowancesForSeparateTaxationOfVariousTypesOfincome operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST taxDeductionsForSalaryIncomeForSeparateTaxationOfVariousTypesOfIncome operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST separateDeductionsForSavingsAndInvestmentsOfTaxCollectorsOfVariousTypesOfIncome operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST specialDeductionsForPhysicalAndMentalDisabilitiesForIndividualIncomeTaxes operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST netIncomeOfVariousTypesOfIncomeSeparatelyTaxed operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST taxPayableForSeparateTaxationOfVariousTypesOfIncome operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST reduceTax operation (+ | - | * | / | none) #REQUIRED>
+<!ATTLIST excludingNetIncomeFromSeparateTaxationOfVariousTypesOfIncome operation (+ | - | * | / | none) #REQUIRED>
+
+<!ATTLIST payable sign CDATA #FIXED "AF">
+<!ATTLIST allwithholdingTaxAndTaxDeductible sign CDATA #FIXED "AG">
+<!ATTLIST refundOfTax sign CDATA #FIXED "AI">
+<!ATTLIST shouldPayTheirOwnTaxes sign CDATA #FIXED "AH">
+<!ATTLIST salaryTaxSeparatedBySalaryIncome sign CDATA #FIXED "AD">
+<!ATTLIST taxesForVariousTypesOfIncome sign CDATA #FIXED "YT">
+
+<!ATTLIST reduceTax name (Excluding tax allowances for separate taxation of various types of income | Excluding deductions for individual tax collectors of various types of income) #REQUIRED>
+
+<!ELEMENT generalAgency (#PCDATA)>
+<!ELEMENT branches (#PCDATA)>
+<!ELEMENT assessingAgencyDesignation (#PCDATA)>
+<!ELEMENT separate (#PCDATA)>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT accountNumber (#PCDATA)>
+<!ELEMENT inspectionNumber (#PCDATA)>
+<!ELEMENT officeName (#PCDATA)>
+<!ELEMENT depositReserve (#PCDATA)>
+<!ELEMENT bureauNumber (#PCDATA)>
+<!ELEMENT depositBookDepositAccount (#PCDATA)>
+<!ELEMENT transferFundsAccount (#PCDATA)>
+<!ELEMENT bV (#PCDATA)>
+<!ATTLIST taxpayer_DD check (true | false) "false">
+<!ATTLIST spouse_SS check (true | false) "false">
+<!ELEMENT taxpayerSignOrStamp (#PCDATA)>
+<!ATTLIST noAttachment check (true | false) "true">
+<!ATTLIST attachment check (true | false) "true">
+<!ELEMENT receivingAgencyReceiptStampAndDate (#PCDATA)>

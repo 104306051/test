@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>活動分類與活動查詢</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<style>
+    .container {
+        margin-top: 30px;
+    }
+
+    .search-form {
+        display: none;
+
+    }
+
+    span {
+        font-weight: bold;
+    }
+
+    em {
+        font-size: 18px;
+    }
+
+    .btn-group {
+        margin-left: 80px;
+    }
+
+    .search-form {
+        margin-left: 120px;
+        border-radius: 40px;
+    }
+
+    #search-input{
+        border-radius: 10px;
+        width: 50%;
+    }
+
+    table {
+        margin-bottom: 100px;
+        margin-left: 80px;
+        margin-right: 80px;
+        text-align: left;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        background-color: #FF7744;
+        border-radius: 10px;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+    }
+
+    .col-sm-12 {
+        font-size: 16px;
+        padding-left: 20px;
+        line-height: 16px;
+    }
+
+    .col-sm-5 {
+        margin-top: 2px;
+    }
+
+    body {
+        font-family: Microsoft JhengHei, serif, sans-serif, cursive, fantasy, monospace;
+    }
+
+    #title {
+        color: #666666;
+        padding-left: 25%;
+        padding-top: 8%;
+        padding-bottom: 6%;
+        background-image: url("https://i.imgur.com/BMJwE7Oh.png")
+    }
+
+    button {
+        background-color: #FF7744;
+        border: none;
+        color: white;
+        padding: 10px 32px;
+        border-radius: 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        -webkit-transition-duration: 0.4s;
+        /* Safari */
+        transition-duration: 0.4s;
+    }
+
+    button:hover {
+        background-color: #FFFFFF;
+        color: #FF7744;
+        border: 2px solid #FF7744;
+    }
+
+    #school {
+        color: #666666;
+        padding: 2% 4%;
+        padding-left: 25%;
+    }
+
+    .big_line {
+        width: 90%;
+        border-color: #FF7744;
+        margin-top: 6px;
+        margin-left: auto;
+        margin-right: auto;
+        border-width: 6px;
+    }
+
+    .big_word {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!--nav-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">HW3 - 活動分類與活動查詢</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        活動分類
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" onclick="getPage1()">音樂</a>
+                        <a class="dropdown-item" onclick="getPage2()">戲劇</a>
+                        <a class="dropdown-item" onclick="getPage3()">舞蹈</a>
+                        <a class="dropdown-item" onclick="getPage4()">親子</a>
+                        <a class="dropdown-item" onclick="getPage6()">展覽</a>
+                        <a class="dropdown-item" onclick="getPage7()">講座</a>
+                        <a class="dropdown-item" onclick="getPage8()">電影</a>
+                        <a class="dropdown-item" onclick="getPage11()">綜藝</a>
+                        <a class="dropdown-item" onclick="getPage13()">競賽</a>
+                        <a class="dropdown-item" onclick="getPage14()">徵選</a>
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <!--big_picture-->
+    <div id="title">
+        <h1>文化部藝文活動</h1>
+        <h1>活動分類與活動查詢</h1>
+        <button onclick="location.href='https://opendata.culture.tw';">資料來源網站</button>
+    </div>
+    <div id="school">
+        <span class="title">STEP1</span>至上方導覽列表的活動分類下拉選單中，選取你想要的分類
+        <br>
+        <br>
+        <span class="title">STEP2</span>活動及搜尋列表將在底下顯示出來，可用搜尋功能搜尋查詢選取分類中的活動
+        <br>
+        <br>
+
+        <div class="search-form col-cm-4" id="search">
+            <input id="search-input" type="text" placeholder="請輸入此分類中想查詢的東西" />
+            <button class="btn" style="font-weight: bold;">搜尋</button>
+            <style id="m-search"></style>
+        </div>
+
+    </div>
+    <hr class="big_line">
+
+    <div class="container" id="show">
+    </div>
+
+    <script>
+        function getPage1() {
+            var url = "http://140.119.162.188:2017/today/json/category1.json";
+            openSearch();
+            loadDoc(url);
+        }
+
+        function getPage2() {
+            var url = "http://140.119.162.188:2017/today/json/category2.json";
+            openSearch();
+            loadDoc(url);
+        }
+
+        function getPage3() {
+            var url = "http://140.119.162.188:2017/today/json/category3.json";
+            openSearch();
+            loadDoc(url);
+        }
+
+        function getPage4() {
+            var url = "http://140.119.162.188:2017/today/json/category4.json";
+            openSearch();
+            loadDoc(url);
+        }
+
+        function getPage6() {
+            var url = "http://140.119.162.188:2017/today/json/category6.json";
+            openSearch();
+            loadDoc(url);
+        }
+
+        function getPage7() {
+            var url = "http://140.119.162.188:2017/today/json/category7.json";
+            openSearch();
+            loadDoc(url);
+        }
+
+        function getPage8() {
+            var url = "http://140.119.162.188:2017/today/json/category8.json";
+            openSearch();
+            loadDoc(url);
+        }
+
+        function getPage11() {
+            var url = "http://140.119.162.188:2017/today/json/category11.json";
+            openSearch();
+            loadDoc(url);
+        }
+
+        function getPage13() {
+            var url = "http://140.119.162.188:2017/today/json/category13.json";
+            openSearch();
+            loadDoc(url);
+        }
+
+        function getPage14() {
+            var url = "http://140.119.162.188:2017/today/json/category14.json";
+            openSearch();
+            loadDoc(url);
+        }
+
+        function openSearch() {
+            document.getElementById("search").style.display = "block";
+        }
+
+        function loadDoc(url) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    constructTable(this.responseText);
+                }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        }
+
+        function constructTable(jsonStr) {
+            var i;
+            var json = JSON.parse(jsonStr);
+            var txt = "";
+            txt += "<table>"
+            for (x in json) {
+
+                txt += "<div class='row wrap' data-index='" + json[x].title + json[x].showUnit + json[x].discountInfo + json[x].masterUnit + json[x].sourceWebName + json[x].startDate + json[x].endDate + "'></br><div class='title'>" + json[x].title + "</div></br></div>";
+                txt += "<div class='row wrap' data-index='" + json[x].title + json[x].showUnit + json[x].discountInfo + json[x].masterUnit + json[x].sourceWebName + json[x].startDate + json[x].endDate + "'><div class='col-sm-12'></br><span>演出單位：</span> " + json[x].showUnit + "</div></br></div>";
+                txt += "<div class='row wrap' data-index='" + json[x].title + json[x].showUnit + json[x].discountInfo + json[x].masterUnit + json[x].sourceWebName + json[x].startDate + json[x].endDate + "'><div class='col-sm-12'></br><span>折扣資訊：</span> " + json[x].discountInfo + "</div></br></div>";
+                txt += "<div class='row wrap' data-index='" + json[x].title + json[x].showUnit + json[x].discountInfo + json[x].masterUnit + json[x].sourceWebName + json[x].startDate + json[x].endDate + "'><div class='col-sm-12'></br><span>簡介說明：</span> " + json[x].descriptionFilterHtml + "</div></br></div>";
+                txt += "<div class='row wrap' data-index='" + json[x].title + json[x].showUnit + json[x].discountInfo + json[x].masterUnit + json[x].sourceWebName + json[x].startDate + json[x].endDate + "'><div class='col-sm-12'></br><span>主辦單位：</span> " + json[x].masterUnit + "</div></br></div>";
+                txt += "<div class='row wrap' data-index='" + json[x].title + json[x].showUnit + json[x].discountInfo + json[x].masterUnit + json[x].sourceWebName + json[x].startDate + json[x].endDate + "'><div class='col-sm-12'></br><span>售票單位：</span> " + json[x].sourceWebName + "</div></br></div>";
+                txt += "<div class='row wrap' data-index='" + json[x].title + json[x].showUnit + json[x].discountInfo + json[x].masterUnit + json[x].sourceWebName + json[x].startDate + json[x].endDate + "'><div class='col-sm-12'></br><span>售票網址：</span><a href='" + json[x].webSales + "'>請點擊</a></div></br></div>";
+                txt += "<div class='row wrap' data-index='" + json[x].title + json[x].showUnit + json[x].discountInfo + json[x].masterUnit + json[x].sourceWebName + json[x].startDate + json[x].endDate + "'><div class='col-sm-12'></br><span>活動起始日期：</span> " + json[x].startDate + "</div></br></div>";
+                txt += "<div class='row wrap' data-index='" + json[x].title + json[x].showUnit + json[x].discountInfo + json[x].masterUnit + json[x].sourceWebName + json[x].startDate + json[x].endDate + "'><div class='col-sm-12'></br><span>活動結束日期：</span> " + json[x].endDate + "</div></br></div>";
+
+            }
+            txt += "</table>"
+            document.getElementById("show").innerHTML = txt;
+        }
+
+        var that = $(this);
+        var mSearch = $("#m-search");
+        $("#search-input").bind("change paste keyup", function () {
+            var value = $(this).val();
+            if (!value) {
+                mSearch.html("");
+                return;
+            };
+            mSearch.html('.wrap:not([data-index*="' + value.toLowerCase() + '"]) {display: none;}');
+        });
+    </script>
+</body>
+
+</html>

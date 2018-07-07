@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE incomeTaxReturnSample SYSTEM "ROCIncomeTaxReturn.dtd"[
+   
+	<!ENTITY type "簡式">
+    <!ENTITY head1 "中華民國105年度綜合所得稅結算申報書">
+    <!ENTITY head2 "(本欄納稅義務人不必填寫)">
+    <!ENTITY headInstructions "(自105年1月1日至12月31日取得的所得都要申報) 單位：新臺幣元">
+    
+	<!ENTITY top_n1 "附件裝訂處請依序裝訂於申報書錢且勿黏貼：1.繳稅取款委託書、自動櫃員機轉帳繳納交易明細表。2.自繳稅款繳款書證明聯。3.其他證明文件(屬國外文件應自行節譯註記)。">
+    <!ENTITY n2 "夫妻分居，屬符合民法第1010條第2項難於維持共同生活，部同居已達6個月以上，向法院聲請宣告採用分別財產制、同法第1089條之1不繼續共同生活達6個月以上，經法院裁定未成年子女權利義務之行使或負擔，或屬依家庭暴力防治法規定取得通常保護令，得各自辦理結算申報及計算稅額者，請打勾，並請檢附相關文件(BF)。(請看說明二之一)">
+    <!ENTITY n3 "不符合上開規定，而無法合併申報之分居夫妻(不包含因工作因素分隔兩地或戶籍地不同等情形)，請打勾，並於申報書上填寫配偶姓名及身分證統一編號(BD)。如需分別開單計稅者，請另附申請書。">
+    <!ENTITY n4 "納稅義務人為大陸地區人民，105年度在臺居、停留合計滿183天者，請打勾。【申報注意事項詳背面說明十五】">
+    <!ENTITY n5 "單身者，請填寫第1欄計算式；有配偶者，可就下列稅額計算式選用較有利者。請於選用欄項打勾：">
+    <!ENTITY n6 "單身者或夫妻所得採合併計算稅額者，請填寫第1欄計算式。">
+    <!ENTITY n7 "夫妻選擇納稅義務人或配偶之薪資所得分開計算稅額者，請填寫第2欄計算式。">
+    <!ENTITY n8 "夫妻選擇納稅義務人或配偶之各類所得分開計算稅額者，請填寫第3欄計算式。">
+    <!ENTITY n9 "※應納稅額請計算至元為止，不足元者無條件捨去。">
+    <!ENTITY n10 "本欄帳號資料限供直撥退稅使用，如欲提供存款帳戶辦理繳稅，請另填寫繳稅取款委託書（詳說明十四之(二)2）">
+    <!ENTITY n11 "限本申報書之納稅義務人、配偶或申報扶養親屬帳戶">
+    <!ENTITY n12 "退稅款不利用直撥退稅轉入存款帳戶或退稅款無法轉入存款帳戶者，國稅局會直接寄送退稅憑單（支票）或退稅通知，納稅義務人不必至自動提款機前操作或輸入任何資料。">
+    <!ENTITY n13 "經國稅局核定退稅金額30元以下且不利用直撥退稅轉入存款帳戶或退稅款無法轉入存款帳戶者，同意不領取該筆退稅款（BY）。">
+    <!ENTITY n14 "限申報書內納稅義務人、配偶名義持有之信用卡">
+    <!ENTITY n15 "※1.如郵寄申報時，請於信封左下角註明「綜合所得申報書」，並掛號逕寄戶籍所在地之國稅局所屬分局、稽徵所或服務處。">
+    <!ENTITY n16 "2.逾期申報者，僅得送（寄）戶籍所在地國稅局。">
+    <!ENTITY n17 "1.繳稅取款委託書、自動櫃員機轉帳繳納交易明細表">
+    <!ENTITY n18 "2.自繳稅款繳款書證明聯">
+    <!ENTITY n19 "3.其他證明文件(屬國外文件應自行節譯註記)">
+    <!ENTITY n20 "※1.本聯請自行填寫。">
+    <!ENTITY n21 "2.為保障權益，本收據請保存7年，以便日後查考。">
+    <!ENTITY n22 "3.如郵寄申報，請撕下自存。">
+    <!ENTITY n23 "105年度綜合所得稅結算申報表及">
+    <!ENTITY n24 "(掛號郵寄申報，郵局收據黏貼處)">
+    <!ENTITY n25 "財政部臺北國稅局 106.04. 5,500張廣告">
+    
+    <!ENTITY reduceTax1 "年滿70歲之納稅義務人、配偶及受扶養直系尊親屬，每人免稅額127,500元">
+    <!ENTITY reduceTax2 "未滿70歲之納稅義務人、配偶及非屬上項之受扶養親屬，每人免稅額85,000元">
+    
+    <!ENTITY specialInstructions1 "有薪資所得者，每人可扣除128,000元，但其全年薪資所得總額未達128,000元者，僅得就其全年薪資所得總額全數扣除。">
+    <!ENTITY specialInstructions2 "有利息所得者，納稅義務人、配偶及受扶養親屬，全年合計不超過27萬元者，得全數扣除；超過27萬元者，以扣除27萬元為限。選擇各類所得分開計稅者，如全戶利息所得超過27萬元，由分開計稅者之他方及受扶養親屬就其利息所得在27萬元限額內先予減除，減除後如有剩餘，再由分開計稅者減除；如全戶利息所得在27萬元以下，則各自就其利息所得部分減除。">
+    <!ENTITY specialInstructions3 "(1)單身者90,000元。(採用列舉扣除者，請使用一般申請書申報)">
+    <!ENTITY specialInstructions4 "(2)夫妻合併申報者180,000元。">
+    <!ENTITY specialInstructions5 "納稅義務人、配偶或受扶養親屬為領有身心障礙手冊者或精神疾病嚴重病人，每人可扣除128,000元。">
+    <!ENTITY specialInstructions6 "納稅義務人申報扶養之子女就讀大專以上院校之教育學費，每人最多扣除25,000元，已接受政府補助者，應以扣除該補助之餘額列報。但就讀空大、空專及五專前3年不適用本項扣除額。">
+    <!ENTITY specialInstructions7 "納稅義務人申報扶養5歲以下之子女，每人每年可扣除25,000元，但經減除本特別扣除額後，全年綜合所得稅適用稅率或採本人或配偶之薪資所得或各類所得分開計算稅額適用稅率在20以上或基本所得額超過67萬元者，不適用本項扣除。">
+    
+]>
+<incomeTaxReturnSample>
+    <header>
+        <notice>&top_n1;</notice> 
+        <type>&type;</type>
+        <head>&head1;</head>
+        <headInstructions>&headInstructions;</headInstructions>
+        <headerForm>
+            <head>&head2;</head>
+            <format>11</format>
+            <office></office>
+            <serviceArea></serviceArea>
+            <boxNumber></boxNumber>
+            <pageNumber></pageNumber>
+        </headerForm>
+    </header>
+    <form>
+        <notice check = 'false'>&n2;</notice>
+        <notice check = 'false'>&n3;</notice>
+        <notice check = 'false'>&n4;</notice>
+        <taxPayerAndTaxAllowance>
+            <name>
+                <taxPayer_DD>
+                    <name>張志明</name>
+                    <iDNumber>A100266713</iDNumber>
+                    <birthYear>60</birthYear>
+                    <disabilities check = 'false'/>
+                </taxPayer_DD>
+
+                <spouse_SS>
+                    <name>陳春嬌</name>
+                    <iDNumber>F201322482</iDNumber>
+                    <birthYear>63</birthYear>
+                    <disabilities check = 'false'/>
+                </spouse_SS>
+
+                <householdRegistrationWhenDeclaring>
+                    <rent check = '否' />
+                    <city>臺北市</city>
+                    <district>大安區</district>
+                    <village>龍安里</village>
+                    <neighborhood>2</neighborhood>
+                    <road>新生南路</road>
+                    <section>2</section>
+                    <lane></lane>
+                    <alley></alley>
+                    <number>80</number>
+                    <floor>4</floor>
+                    <room></room>                    
+                </householdRegistrationWhenDeclaring>
+                
+                <notificationSendingPlace status = '同上'>
+                    <city></city>
+                    <district></district>
+                    <village></village>
+                    <neighborhood></neighborhood>
+                    <road></road>
+                    <section></section>
+                    <lane></lane>
+                    <alley></alley>
+                    <number></number>
+                    <floor></floor>
+                    <room></room>  
+                </notificationSendingPlace>
+
+                <contactPhoneNumber>
+                    <phoneNumber1>(02)2311-3711</phoneNumber1>
+                    <phoneNumber2>(02)2311-3899</phoneNumber2>
+                </contactPhoneNumber>
+            </name>
+            <supportingRelatives>
+                <loginCode code = 'D01'>
+                    <name>張無忌</name>
+                    <iDNumber>A103849043</iDNumber>
+                    <head>子</head>
+                    <birthYear>94</birthYear>
+                    <cohabitation status = '是' />
+                    <learning status = '是' />
+                    <disabilities check = 'false' />
+                </loginCode>
+                <loginCode code = 'D02'>
+                    <name>王志玲</name>
+                    <iDNumber>A200831641</iDNumber>
+                    <head>母</head>
+                    <birthYear>30</birthYear>
+                    <cohabitation status = '是' />
+                    <learning status = '否' />
+                    <disabilities check = 'false' />
+                </loginCode>
+                <loginCode code = 'D03'>
+                    <name></name>
+                    <iDNumber></iDNumber>
+                    <head></head>
+                    <birthYear></birthYear>
+                    <cohabitation status = '否' />
+                    <learning status = '否' />
+                    <disabilities check = 'false' />
+                </loginCode>
+            </supportingRelatives>
+
+            <reduceTax>
+                <type>&reduceTax1;</type>
+                <people>1</people>
+                <total>127,500</total>
+                <reviewNumberOfPeople></reviewNumberOfPeople>
+            </reduceTax>
+            <reduceTax>
+                <type>&reduceTax2;</type>
+                <people>3</people>
+                <total>255,000</total>
+                <reviewNumberOfPeople></reviewNumberOfPeople>
+            </reduceTax>
+            <taxAllowanceTotal_DM>382,500</taxAllowanceTotal_DM>
+
+        </taxPayerAndTaxAllowance>
+
+        <comprehensiveIncomeTotal>
+            <income type = 'Salary income'>
+                <people>
+                    <name>張志明</name>
+                    <total>867,000</total>
+                    <withholdingTaxOrDeductibleTaxAmount>33,300</withholdingTaxOrDeductibleTaxAmount>
+                </people>
+
+                <people>
+                    <name>陳春嬌</name>
+                    <total>616,000</total>
+                    <withholdingTaxOrDeductibleTaxAmount>19,400</withholdingTaxOrDeductibleTaxAmount>
+                </people>
+
+                <people>
+                    <name>張無忌</name>
+                    <total>40,000</total>
+                    <withholdingTaxOrDeductibleTaxAmount>2,400</withholdingTaxOrDeductibleTaxAmount>
+                </people>
+            </income>
+
+            <income type = 'Interest income'>
+                <people>
+                    <name>張志明</name>
+                    <total>24,000</total>
+                    <withholdingTaxOrDeductibleTaxAmount>2,400</withholdingTaxOrDeductibleTaxAmount>
+                </people>
+
+                <people>
+                    <name>王志玲</name>
+                    <total>70,000</total>
+                    <withholdingTaxOrDeductibleTaxAmount>7,000</withholdingTaxOrDeductibleTaxAmount>
+                </people>
+
+                <people>
+                    <name></name>
+                    <total></total>
+                    <withholdingTaxOrDeductibleTaxAmount></withholdingTaxOrDeductibleTaxAmount>
+                </people>
+            </income>
+
+            <income type = 'Profit income'>
+                <people>
+                    <name>陳春嬌</name>
+                    <total>137,800</total>
+                    <withholdingTaxOrDeductibleTaxAmount>10,000</withholdingTaxOrDeductibleTaxAmount>
+                </people>
+
+                <people>
+                    <name></name>
+                    <total></total>
+                    <withholdingTaxOrDeductibleTaxAmount></withholdingTaxOrDeductibleTaxAmount>
+                </people>
+
+                <people>
+                    <name></name>
+                    <total></total>
+                    <withholdingTaxOrDeductibleTaxAmount></withholdingTaxOrDeductibleTaxAmount>
+                </people>
+
+                <people>
+                    <name></name>
+                    <total></total>
+                    <withholdingTaxOrDeductibleTaxAmount></withholdingTaxOrDeductibleTaxAmount>
+                </people>
+
+                <people>
+                    <name></name>
+                    <total></total>
+                    <withholdingTaxOrDeductibleTaxAmount></withholdingTaxOrDeductibleTaxAmount>
+                </people>
+            </income>
+
+            <income type = 'Welfare'>
+                <people>
+                    <name>張志明</name>
+                    <total>5,000</total>
+                    <withholdingTaxOrDeductibleTaxAmount>0</withholdingTaxOrDeductibleTaxAmount>
+                </people>
+
+                <people>
+                    <name></name>
+                    <total></total>
+                    <withholdingTaxOrDeductibleTaxAmount></withholdingTaxOrDeductibleTaxAmount>
+                </people>
+            </income>
+
+            <income type = 'Contribution fees below 180,000'>
+                <people>
+                    <name>陳春嬌</name>
+                    <total>89,000</total>
+                    <WithholdingTax>8,900</WithholdingTax>
+                </people>
+
+                <people>
+                    <name></name>
+                    <total></total>
+                    <withholdingTax></withholdingTax>
+                </people>
+            </income>
+
+            <totalIncome_YM>896,000</totalIncome_YM>
+            <spousetotalIncome_YN>753,800</spousetotalIncome_YN>
+            <comprehensiveIncomeTotal_AA>1,759,800</comprehensiveIncomeTotal_AA>
+            <totalWithholdingTaxAndDeductibleTaxAmount_AG>83,400</totalWithholdingTaxAndDeductibleTaxAmount_AG>
+
+        </comprehensiveIncomeTotal>
+
+        <deductions>
+            <deductionsItem type = 'Special deductions for salary income'>
+                <instructions>&specialInstructions1;</instructions>
+                
+                <people type = 'Taxpayer'>
+                    <name>張志明</name>
+                    <totalSalaryIncomeForTheWholeYear>867,000</totalSalaryIncomeForTheWholeYear>
+                    <deductible>128,000</deductible>
+                </people>
+
+                <people type = 'Spouse'>
+                    <name>陳春嬌</name>
+                    <totalSalaryIncomeForTheWholeYear>616,000</totalSalaryIncomeForTheWholeYear>
+                    <deductible>128,000</deductible>
+                </people>
+
+                <people type = 'All dependents'>
+                    <totalSalaryIncomeForTheWholeYear>40,000</totalSalaryIncomeForTheWholeYear>
+                    <deductible>40,000</deductible>
+                </people>
+
+                <subtotal>296,000</subtotal>
+
+                <authorityAudit></authorityAudit>
+
+            </deductionsItem>
+
+            <deductionsItem type = 'Savings Special Deductions'>
+                <instructions>&specialInstructions2;</instructions>
+                
+                <people type = 'Taxpayer'>
+                    <name>張志明</name>
+                    <totalSalaryIncomeForTheWholeYear>24,000</totalSalaryIncomeForTheWholeYear>
+                    <deductible>24,000</deductible>
+                </people>
+
+                <people type = 'Spouse'>
+                    <name>陳春嬌</name>
+                    <totalSalaryIncomeForTheWholeYear>0</totalSalaryIncomeForTheWholeYear>
+                    <deductible>0</deductible>
+                </people>
+
+                <people type = 'All dependents'>
+                    <totalSalaryIncomeForTheWholeYear>70,000</totalSalaryIncomeForTheWholeYear>
+                    <deductible>70,000</deductible>
+                </people>
+
+                <subtotal>94,000</subtotal>
+
+                <authorityAudit></authorityAudit>
+                
+            </deductionsItem>
+
+            <deductionsItem type = 'Standard Deduction'>
+                <instructions check = 'false'>&specialInstructions3;</instructions>
+                <instructions check = 'true'>&specialInstructions4;</instructions>
+                <subtotal>180,000</subtotal>
+                <authorityAudit></authorityAudit>                
+            </deductionsItem>
+
+            <deductionsItem type = 'Disabilities Special Deduction'>
+                <instructions people = '0'>&specialInstructions5;</instructions>
+                <subtotal></subtotal>
+                <authorityAudit></authorityAudit>                
+            </deductionsItem>
+
+            <deductionsItem type = 'Education Tuition Special Deduction'>
+                <instructions people = '0'>&specialInstructions6;</instructions>
+                <subtotal></subtotal>
+                <authorityAudit></authorityAudit>                
+            </deductionsItem>
+
+            <deductionsItem type = 'Preschoolers Special Deduction'>
+                <instructions people = '0'>&specialInstructions7;</instructions>
+                <subtotal></subtotal>
+                <authorityAudit></authorityAudit>                
+            </deductionsItem>
+
+            <totalDeductions>
+                <subtotal>570,000</subtotal>
+                <authorityAudit></authorityAudit> 
+            </totalDeductions>
+
+            <comprehensiveNetIncomeCalculation>
+                <calculationFormula>
+                    <comprehensiveIncome operation = '+' sign = 'AA'>1,759,800</comprehensiveIncome>
+                    <allAllowances operation = '-' sign = 'DM'>382,500</allAllowances>
+                    <allDeductions operation = '-' sign = 'AB1'>570,000</allDeductions>
+                    <comprehensiveNetIncome operation = 'none' sign = 'AE'>807,300</comprehensiveNetIncome>
+                </calculationFormula>
+            </comprehensiveNetIncomeCalculation>
+
+        </deductions>
+
+        <notice>&n5;</notice>
+        <notice check = 'false'>&n6;</notice>
+        <notice check = 'false'>&n7;</notice>
+        <notice check = 'false'>&n8;</notice>
+
+        <taxCalculationFormula>
+            <type name = 'Combined calculation tax amount' number = '1'>
+                <calculationFormula>
+                    <comprehensiveNetIncome operation = '+' sign = 'AE'>
+                    </comprehensiveNetIncome>
+
+                    <taxRate operation = '*'>
+                    </taxRate>
+
+                    <progressiveDifference operation = '-'>
+                    </progressiveDifference>
+
+                    <payable operation = 'none' sign = 'AF'>
+                    </payable>
+                </calculationFormula>
+
+                <calculationFormula>
+                    <payable operation = '+' sign = 'AF'>
+                    </payable>
+
+                    <allwithholdingTaxAndTaxDeductible operation = '-' sign = 'AG'>
+                    </allwithholdingTaxAndTaxDeductible>
+
+                    <refundOfTax operation = 'none' sign = 'AI'>
+                    </refundOfTax>
+
+                    <shouldPayTheirOwnTaxes operation = 'none' sign = 'AH'>
+                    </shouldPayTheirOwnTaxes>
+                </calculationFormula>
+
+                <authorityAudit></authorityAudit>
+                <notice>&n9;</notice>
+
+            </type>
+
+            <type name = 'Separately calculated tax amount for salary income' number = '2'>
+                <calculationFormula>
+                    <salaryTaxSeparatedBySalaryIncome operation = '+' sign = 'AD'>
+                        616,000
+                    </salaryTaxSeparatedBySalaryIncome>
+
+                    <taxationForTaxPayers operation = '-'>
+                        85,000
+                        ≠≠≠
+                    </taxationForTaxPayers>
+
+                    <payrollIncomeDeductionsForPayrollTaxation operation = '-'>
+                        128,000
+                    </payrollIncomeDeductionsForPayrollTaxation>
+
+                    <netSalaryOfPayrollTaxation operation = 'none'>
+                        403,000
+                    </netSalaryOfPayrollTaxation>
+                </calculationFormula>
+
+                <calculationFormula>
+                    <netSalaryOfPayrollTaxation operation = '+'>
+                        403,000
+                    </netSalaryOfPayrollTaxation>
+
+                    <taxRate operation = '*'>
+                        5%
+                    </taxRate>
+
+                    <progressiveDifference operation = '-'>
+                        0
+                    </progressiveDifference>
+
+                    <taxPayableSeparatelyFromTheTaxablePortion operation = 'none'>
+                        20,150
+                    </taxPayableSeparatelyFromTheTaxablePortion>
+                </calculationFormula>
+
+                <calculationFormula>
+                    <comprehensiveNetIncome operation = '+' sign = 'AE'>
+                        807,300
+                    </comprehensiveNetIncome>
+
+                    <netSalaryOfPayrollTaxation operation = '-'>
+                        403,000
+                    </netSalaryOfPayrollTaxation>
+
+                    <excludingNetIncomeFromTheSeparateTaxPortionOfPayroll operation = 'none'>
+                        404,300
+                    </excludingNetIncomeFromTheSeparateTaxPortionOfPayroll>
+                </calculationFormula>
+
+                <calculationFormula>
+                    <excludingNetIncomeFromTheSeparateTaxPortionOfPayroll operation = '+'>
+                        404,300
+                    </excludingNetIncomeFromTheSeparateTaxPortionOfPayroll>
+
+                    <taxRate operation = '*'>
+                        5%
+                    </taxRate>
+
+                    <progressiveDifference operation = '-'>
+                        0
+                    </progressiveDifference>
+
+                    <excludingTaxPayableForTheSeparateTaxPortionOfPayroll operation = 'none'>
+                        20,215
+                    </excludingTaxPayableForTheSeparateTaxPortionOfPayroll>
+                </calculationFormula>
+
+                <calculationFormula>
+                    <excludingTaxPayableForTheSeparateTaxPortionOfPayroll operation = '+'>
+                        20,150
+                    </excludingTaxPayableForTheSeparateTaxPortionOfPayroll>
+
+                    <excludingTaxPayableForTheSeparateTaxPortionOfPayroll operation = '+'>
+                        20,215
+                    </excludingTaxPayableForTheSeparateTaxPortionOfPayroll>
+
+                    <payable operation = 'none' sign = 'AF'>
+                        40,365
+                    </payable>
+                </calculationFormula>
+
+                <calculationFormula>
+                    <payable operation = '+' sign = 'AF'>
+                        40,365
+                    </payable>
+
+                    <allwithholdingTaxAndTaxDeductible operation = '-' sign = 'AG'>
+                        83,400
+                    </allwithholdingTaxAndTaxDeductible>
+
+                    <refundOfTax operation = 'none' sign = 'AI'>
+                        43,035
+                    </refundOfTax>
+
+                    <shouldPayTheirOwnTaxes operation = 'none' sign = 'AH'>
+                    </shouldPayTheirOwnTaxes>
+                </calculationFormula>
+
+                <authorityAudit></authorityAudit>
+                <notice>&n9;</notice>
+
+            </type>
+
+            <type name = 'Taxes are calculated separately for various types of income' number = '3'>
+                <calculationFormula>
+                    <taxesForVariousTypesOfIncome operation = '+' sign = 'YT'>
+                    </taxesForVariousTypesOfIncome>
+
+                    <taxationAllowancesForSeparateTaxationOfVariousTypesOfincome operation = '-'>
+                    </taxationAllowancesForSeparateTaxationOfVariousTypesOfincome>
+
+                    <taxDeductionsForSalaryIncomeForSeparateTaxationOfVariousTypesOfIncome operation = '-'>
+                    </taxDeductionsForSalaryIncomeForSeparateTaxationOfVariousTypesOfIncome>
+
+                    <separateDeductionsForSavingsAndInvestmentsOfTaxCollectorsOfVariousTypesOfIncome operation = '-'>
+                    </separateDeductionsForSavingsAndInvestmentsOfTaxCollectorsOfVariousTypesOfIncome>
+
+                    <specialDeductionsForPhysicalAndMentalDisabilitiesForIndividualIncomeTaxes operation = '-'>
+                    </specialDeductionsForPhysicalAndMentalDisabilitiesForIndividualIncomeTaxes>
+
+                    <netIncomeOfVariousTypesOfIncomeSeparatelyTaxed operation = 'none'>
+                    </netIncomeOfVariousTypesOfIncomeSeparatelyTaxed>
+                </calculationFormula>
+
+                <calculationFormula>
+                    <netIncomeOfVariousTypesOfIncomeSeparatelyTaxed operation = '+'>
+                    </netIncomeOfVariousTypesOfIncomeSeparatelyTaxed>
+
+                    <taxRate operation = '*'>
+                    </taxRate>
+
+                    <progressiveDifference operation = '-'>
+                    </progressiveDifference>
+
+                    <taxPayableForSeparateTaxationOfVariousTypesOfIncome operation = 'none'>
+                    </taxPayableForSeparateTaxationOfVariousTypesOfIncome>
+                </calculationFormula>
+
+                <calculationFormula>
+                    <comprehensiveIncome operation = '+' sign = 'AA'>
+                    </comprehensiveIncome>
+
+                    <taxesForVariousTypesOfIncome operation = '-' sign = 'YT'>
+                    </taxesForVariousTypesOfIncome>
+
+                    <reduceTax name = 'Excluding tax allowances for separate taxation of various types of income' operation = '-'>
+                    </reduceTax>
+
+                    <reduceTax name = 'Excluding deductions for individual tax collectors of various types of income' operation = '-'>
+                    </reduceTax>
+
+                    <excludingNetIncomeFromSeparateTaxationOfVariousTypesOfIncome operation = 'none'>
+                    </excludingNetIncomeFromSeparateTaxationOfVariousTypesOfIncome>
+                </calculationFormula>
+
+                <calculationFormula>
+                    <excludingNetIncomeFromSeparateTaxationOfVariousTypesOfIncome operation = '+'>
+                    </excludingNetIncomeFromSeparateTaxationOfVariousTypesOfIncome>
+
+                    <taxRate operation = '*'>
+                    </taxRate>
+
+                    <progressiveDifference operation = '-'>
+                    </progressiveDifference>
+
+                    <excludingTaxPayableForSeparateTaxationOfVariousTypesOfIncome operation = 'none'>
+                    </excludingTaxPayableForSeparateTaxationOfVariousTypesOfIncome>
+                </calculationFormula>
+
+                <calculationFormula>
+                    <taxPayableForSeparateTaxationOfVariousTypesOfIncome operation = '+'>
+                    </taxPayableForSeparateTaxationOfVariousTypesOfIncome>
+
+                    <excludingTaxPayableForSeparateTaxationOfVariousTypesOfIncome operation = '+'>
+                    </excludingTaxPayableForSeparateTaxationOfVariousTypesOfIncome>
+
+                    <payable operation = 'none' sign = 'AF'>
+                    </payable>
+                </calculationFormula>
+
+                <calculationFormula>
+                    <payable operation = '+' sign = 'AF'>
+                    </payable>
+
+                    <allWithholdingTaxAndTaxDeductible operation = '-' sign = 'AG'>
+                    </allWithholdingTaxAndTaxDeductible>
+
+                    <refundOfTax operation = 'none' sign = 'AI'>
+                    </refundOfTax>
+
+                    <shouldPayTheirOwnTaxes operation = 'none' sign = 'AH'>
+                    </shouldPayTheirOwnTaxes>
+                </calculationFormula>
+
+                <authorityAudit></authorityAudit>
+            </type>
+        </taxCalculationFormula>
+
+        <notice>&n10;</notice>
+
+        <useSavingsAccountTaxRefund>
+            <notice>&n11;</notice>
+            <name>張志明</name>
+            <iDNumber>A100266713</iDNumber>
+            <financialInstitutions>
+                <generalAgency>第一銀行</generalAgency>
+                <branches>延吉銀行</branches>
+            </financialInstitutions>
+            <assessingAgencyDesignation></assessingAgencyDesignation>
+            <account>
+                <separate>130</separate>
+                <subject>50</subject>
+                <accountNumber>91609</accountNumber>
+                <inspectionNumber>2</inspectionNumber>
+            </account>
+            <postOffice>
+                <officeName name = '' branches = ''></officeName>
+                <depositReserve codeNumber = '1234'>
+                    <bureauNumber></bureauNumber>
+                    <depositBookDepositAccount></depositBookDepositAccount>
+                </depositReserve>
+                <transferFundsAccount codeNumber = '1234'></transferFundsAccount>
+            </postOffice>
+            <notice>&n12;</notice>
+            <notice check = 'false'>&n13;</notice>
+        </useSavingsAccountTaxRefund>
+
+        <creditCardTax>
+            <notice>&n14;</notice>
+            <bV>0</bV>
+            <authorizationNumber>
+                <number></number>
+                <number></number>
+                <number></number>
+                <number></number>
+                <number></number>
+                <number></number>
+            </authorizationNumber>
+            <cardholder>
+                <taxpayer_DD check = 'fasle'></taxpayer_DD>
+                <spouse_SS check = 'false'></spouse_SS>
+            </cardholder>
+        </creditCardTax>
+        
+	</form>
+ 
+	<footer>    
+        <section1>
+            <taxpayerSignOrStamp>張志明</taxpayerSignOrStamp>
+            <notice>&n15;</notice>
+            <notice>&n16;</notice>
+            <attachmentArea>
+                <noAttachment check = 'true'></noAttachment>
+                <attachment check = 'fasle'>
+                    <notice page = '0'>&n17;</notice>
+                    <notice page = '0'>&n18;</notice>
+                    <notice page = '0'>&n19;</notice>
+                </attachment>
+            </attachmentArea>
+            <receivingAgencyReceiptStampAndDate></receivingAgencyReceiptStampAndDate>
+        </section1>
+
+        <section2>
+            <received>
+                <name>張志明</name>
+                <gender></gender>
+                <city>臺北市</city>
+                <district>大安區</district>
+                <village>龍安里</village>
+                <neighborhood>2</neighborhood>
+                <road>新生南路</road>
+                <section>2</section>
+                <lane></lane>
+                <alley></alley>
+                <number>80</number>
+                <floor>4</floor>
+                <room></room>     
+            </received>
+            <notice>&n20;</notice>
+            <notice>&n21;</notice>
+            <notice>&n22;</notice>
+            <attachmentArea>
+                <notice>&n23;</notice>
+                <noAttachment check = 'true'></noAttachment>
+                <attachment check = 'fasle'>
+                    <notice page = '0'>&n17;</notice>
+                    <notice page = '0'>&n18;</notice>
+                    <notice page = '0'>&n19;</notice>
+                </attachment>
+            </attachmentArea>
+            <notice>&n24;</notice>
+            <receivingAgencyReceiptStampAndDate></receivingAgencyReceiptStampAndDate>
+            <notice>&n25;</notice>
+        </section2>
+    </footer>
+    
+</incomeTaxReturnSample>
